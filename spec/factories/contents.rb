@@ -18,4 +18,12 @@ FactoryBot.define do
     year { 2011 }
     sequence(:number)
   end
+
+  factory :episode, class: "Episode" do
+    association :season
+    sequence(:title) { |n| "Episode #{n}" }
+    sequence(:original_title) { |n| "Original Episode #{n}" }
+    year { 2012 }
+    sequence(:number)
+  end
 end
